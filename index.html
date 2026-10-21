@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZARAH'S LIBRARY | Stories</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h1>WELCOME TO ZARAH'S LIBRARY🌊</h1>
+
+    <div class="nav-links">
+      <a href="#home" onclick="showHome(); return false;">Home</a>
+      <a href="#stories" onclick="showAllStories(); return false;">Stories</a>
+      <a href="#about" onclick="showAbout(); return false;">About</a>
+    </div>
+
+    <button class="mode-button" onclick="toggleMode()">Dark / Light</button>
+  </nav>
+
+  <main>
+    <!-- LANDING PAGE: tatlong genre lang muna -->
+    <section id="home" class="genre-page">
+      <h2>Choose Your Genre</h2>
+      <p class="genre-subtitle">Choose a genre to explore its books.</p>
+
+      <div class="genre-buttons">
+        <button onclick="showGenre('romance')">ROMANCE</button>
+        <button onclick="showGenre('horror')">HORROR</button>
+        <button onclick="showGenre('fantasy')">FANTASY</button>
+      </div>
+    </section>
+
+    <!-- Lalabas ang book covers kapag pumili ng genre -->
+    <section id="stories" class="stories" hidden>
+      <h2 id="genre-title">Books</h2>
+      <div id="story-container" class="story-container"></div>
+
+      <button class="back-button" onclick="backToGenres()">
+        ← Back to Genres
+      </button>
+    </section>
+
+    <!-- CHAPTER VIEW -->
+    <section id="chapter-view" class="chapter-view" hidden>
+      <div id="chapter-content"></div>
+
+      <button class="back-button" onclick="backToStories()">
+        ← Back to Books
+      </button>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="chapter-view" hidden>
+      <h2>About Zarah's Library</h2>
+
+      <p>
+        Welcome to Zarah's Library! This website is a collection
+        of romance, horror, and fantasy stories. Choose your
+        favorite genre, explore different books, and enjoy reading
+        their synopses and Chapter 1.
+      </p>
+
+      <p>Created by: Zarah</p>
+
+      <button class="back-button" onclick="showHome()">
+        ← Back to Home
+      </button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
